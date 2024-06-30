@@ -8,11 +8,5 @@
     "theme_color": "#ffffff",
     "display": "fullscreen",
     "display_override": ["standalone"],
-    "icons": [
-        {
-            "src": "./images/favicon.png",
-            "type": "image/png",
-            "sizes": "64x64"
-        }   
-    ]
+    "icons": []
 }
