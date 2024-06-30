@@ -1,0 +1,18 @@
+{
+    "name": "Bram Matthys",
+    "short_name": "TEST",
+    "description": "Hello World as a Progressive Web App",
+    "scope": "./",
+    "start_url": "./",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "display": "fullscreen",
+    "display_override": ["standalone"],
+    "icons": [
+        {
+            "src": "./images/favicon.png",
+            "type": "image/png",
+            "sizes": "64x64"
+        }   
+    ]
+}
