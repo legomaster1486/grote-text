@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show text</title>
+</head>
+
+<body>
+    <div class="container">
+        <p id="text">hier zou iets moeten staan</p>
+    </div>
+</body>
+<style>
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    p {
+        margin: auto;
+        text-align: center;
+        font-size: 10vw;
+    }
+</style>
+<script>
+    function main() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+
+        let waarde = urlParams.get("text");
+
+        console.log(waarde);
+
+        document.querySelector("#text").innerHTML = waarde;
+    }
+    window.onload = main;
+</script>
+
+</html>
