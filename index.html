@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App</title>
+    <link rel="manifest" href="./manifest.json">
 </head>
 
 <body>
@@ -13,5 +14,16 @@
         <input type="text" name="text" id="text">
         <button type="submit">Show me</button>
     </form>
-
+</body>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+            .then(registration => {
+                console.log('Excellent, registered with scope:', registration.scope);
+            })
+            .catch(error => {
+                console.error('Service worker registration failed:', error);
+            });
+    }
+</script>
 </html>
