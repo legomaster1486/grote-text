@@ -2,10 +2,8 @@ const staticCacheName = 'site-static-v2'
 const dynamicCacheName = 'site-dynamic-v1'
 const assets = [
   './',
-  './index.html',
-  './'
 ]
- 
+
 // cache size limit function
 const limitCacheSize = (name, size) => {
   caches.open(name).then(cache => {
@@ -16,7 +14,7 @@ const limitCacheSize = (name, size) => {
     })
   })
 }
- 
+
 // install event
 self.addEventListener('install', evt => {
   //console.log('service worker installed')
@@ -27,7 +25,7 @@ self.addEventListener('install', evt => {
     })
   )
 })
- 
+
 // activate event
 self.addEventListener('activate', evt => {
   //console.log('service worker activated')
@@ -41,7 +39,7 @@ self.addEventListener('activate', evt => {
     })
   )
 })
- 
+
 // fetch event
 self.addEventListener('fetch', evt => {
   //console.log('fetch event', evt)
